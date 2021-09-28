@@ -111,12 +111,26 @@ function buttonCompleteAction(buttonTypeClass, eventListener) {
     return completeButton
 }
 
+// function buttonDeleteAction(buttonTypeClass, eventListener) {
+//     const deleteButton = document.createElement('button')
+//     deleteButton.classList.add(buttonTypeClass)
+//     deleteButton.style.background = 'url("./assets/svg/delete_icon.svg")'
+//     deleteButton.addEventListener('click', function(event) {
+//         eventListener(event)
+//     })
+    
+//     return deleteButton
+// }
+
 function buttonDeleteAction(buttonTypeClass, eventListener) {
     const deleteButton = document.createElement('button')
     deleteButton.classList.add(buttonTypeClass)
     deleteButton.style.background = 'url("./assets/svg/delete_icon.svg")'
     deleteButton.addEventListener('click', function(event) {
-        eventListener(event)
+        let deleteQuestion = confirm('Are you sure delete this book?')
+        if(deleteQuestion) {
+            eventListener(event)
+        }
     })
     
     return deleteButton

@@ -45,7 +45,7 @@
   width: 3rem;
   height: 3rem;
   padding: 1rem;
-  left: 25%;
+  left: 5%;
   cursor: pointer;
   background-size: contain;
   border: none;
@@ -58,7 +58,7 @@
   width: 3rem;
   height: 3rem;
   padding: 1rem;
-  left: 25%;
+  left: 5%;
   cursor: pointer;
   background-size: contain;
   border: none;
@@ -95,9 +95,10 @@
 * div.book_list div.book_item {
   display: flex;
   flex-direction: column;
-  width: fit-content;
+  width: 70%;
   height: fit-content;
   padding: .1rem;
+  overflow: hidden;
 }
 
 * div.book_list div.book_item h3.book_titles {
@@ -369,6 +370,107 @@ main section.right_section section.not_read_book div.not_finished_reading_list {
   overflow-y: scroll;
 }
 
+main div.not_found {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+main div.not_found h1 {
+  font-size: 10rem;
+  color: red;
+}
+
+main div.not_found h3 {
+  font-size: 6rem;
+}
+
+main div.not_found h4 {
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+main div.not_found a {
+  font-size: 2rem;
+  text-decoration: none;
+  color: black;
+  transition-duration: .5s;
+}
+
+main div.not_found a div {
+  display: flex;
+  width: 100%;
+  height: .15rem;
+  opacity: 0;
+  background: #FF616D;
+  transition-duration: .5s;
+}
+
+main div.not_found a:hover {
+  color: #FF616D;
+  transition-duration: .3s;
+}
+
+main div.not_found a:hover div {
+  opacity: 1;
+  transition-duration: .3s;
+}
+
+div.modal_confirmation {
+  display: none;
+  position: fixed;
+  flex-direction: column;
+  width: 40rem;
+  left: 40%;
+  top: 40%;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  border: .5rem solid #FF616D;
+  border-radius: .5rem;
+}
+
+div.modal_confirmation h3.modal_text {
+  font-size: 2.8rem;
+  text-align: center;
+}
+
+div.modal_confirmation div.modal_button_group {
+  display: flex;
+  width: fit-content;
+  height: fit-content;
+  margin-top: 2rem;
+  padding: .5rem;
+  gap: 1rem;
+}
+
+div.modal_confirmation div.modal_button_group button {
+  width: 5rem;
+  height: fit-content;
+  font-size: 2rem;
+  cursor: pointer;
+  transition-duration: .3s;
+}
+
+div.modal_confirmation div.modal_button_group button:hover {
+  transform: scale(1.05);
+  transition-duration: .3s;
+}
+
+div.modal_confirmation div.modal_button_group button.modal_button_yes {
+  background-color: white;
+  border: 2px solid #FF616D;
+}
+
+div.modal_confirmation div.modal_button_group button.modal_button_no {
+  background-color: #FF616D;
+  border: 2px solid #FF616D;
+}
+
 @media screen and (max-width: 1440px) {
   nav img.web_logo {
     right: 3%;
@@ -422,6 +524,18 @@ main section.right_section section.not_read_book div.not_finished_reading_list {
     height: fit-content;
     font-size: 1.75rem;
   }
+  * div.book_list {
+    width: 96%;
+  }
+  * div.book_list button.finished_button {
+    left: 8%;
+  }
+  * div.book_list button.ongoing_button {
+    left: 8%;
+  }
+  * div.book_list div.book_item {
+    width: 50%;
+  }
   nav img.web_logo {
     right: 2%;
     width: 14rem;
@@ -444,12 +558,18 @@ main section.right_section section.not_read_book div.not_finished_reading_list {
   main section.right_section section.not_read_book {
     width: 73vw;
   }
+  div.modal_confirmation {
+    left: 30%;
+  }
 }
 
 @media screen and (max-width: 834px) {
   * {
     overflow: hidden;
     overflow-y: scroll;
+  }
+  * div.book_list {
+    width: 95.5%;
   }
   nav {
     z-index: 3;
@@ -548,6 +668,9 @@ main section.right_section section.not_read_book div.not_finished_reading_list {
   }
   main section.right_section section.not_read_book {
     width: 95vw;
+  }
+  div.modal_confirmation {
+    left: 8%;
   }
 }
 

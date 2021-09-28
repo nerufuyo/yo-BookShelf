@@ -17,18 +17,20 @@
 <body>
     <nav>
         <img src="assets/svg/web_logo.svg" alt="Listyo Adi Bookshelf Image" class="web_logo">
+        <!-- Coming Soon -->
         <div class="search_bar">
             <input type="text" placeholder="Input Title for Search..." class="search_input">
             <div class="search_button"><img src="assets/svg/search_icon.svg" alt="Search"></div>
         </div>
+        <!-- End Coming Soon -->
         <ul class="list_menu">
-            <li class="list_item"><a href="#" class="item_link">Dashboard
+            <li class="list_item"><a href="index.html" class="item_link">Dashboard
                 <div class="link_underline"></div>
             </a></li>
-            <li class="list_item"><a href="#" class="item_link">About
+            <li class="list_item"><a href="404.html" class="item_link">About
                 <div class="link_underline"></div>
             </a></li>
-            <li class="list_item"><a href="#" class="item_link">Contact
+            <li class="list_item"><a href="404.html" class="item_link">Contact
                 <div class="link_underline"></div>
             </a></li>
         </ul>
@@ -39,6 +41,7 @@
         </div>
     </nav>
     <main>
+        <!-- Main Content -->
         <section class="left_section">
             <section class="add_book">
                 <div class="header_title">
@@ -53,6 +56,7 @@
                     <input type="date" placeholder="Book Publication Year" class="input_book_year" required>
                     <label class="book_synopsis">Synopsis</label>
                     <input type="text" placeholder="Under Maintenance" class="input_book_synopsis" disabled>
+                    <!-- Coming Soon -->
                     <div class="add_radio_button">
                         <div class="read">
                             <input type="radio" value="read" name="book_readed">
@@ -63,8 +67,8 @@
                             <label for="not_read">Not Yet</label>
                         </div>
                     </div>
-                    <!-- <div class="add_button" type="submit" value="Submit" name="Submit">Add</div> -->
                     <input type="submit" value="Submit" name="Submit" class="add_button">
+                    <!-- End Coming Soon -->
                 </form>
             </section>
         </section>
@@ -83,6 +87,14 @@
             </section>
         </section>
     </main>
+    <!-- Modal Pop Up -->
+    <div class="modal_confirmation">
+        <h3 class="modal_text">Are you sure to delete this book?</h3>
+        <div class="modal_button_group">
+            <button class="modal_button_yes">Yes</button>
+            <button class="modal_button_no">No</button>
+        </div>
+    </div>
     <!-- Script Link -->
     <script src="assets/js/data.js"></script>
     <script src="assets/js/app.js"></script>
