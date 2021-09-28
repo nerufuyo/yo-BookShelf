@@ -1,0 +1,656 @@
+* {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'Signika Negative', sans-serif;
+}
+
+* div.header_title {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  padding: 1rem;
+  justify-content: center;
+  background: #FF616D;
+}
+
+* div.header_title h1.text_title {
+  font-size: 2rem;
+  color: white;
+}
+
+* .leftSide {
+  display: flex;
+  position: absolute;
+  left: 60%;
+}
+
+* div.book_list {
+  display: flex;
+  width: 97.5%;
+  height: fit-content;
+  padding: .5rem;
+  justify-content: space-between;
+  align-items: center;
+  gap: .5rem;
+  overflow: visible;
+  border-radius: .5rem;
+  border: 2px solid #FF616D;
+}
+
+* div.book_list button.finished_button {
+  display: flex;
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+  padding: 1rem;
+  left: 25%;
+  cursor: pointer;
+  background-size: contain;
+  border: none;
+  transition-duration: .3s;
+}
+
+* div.book_list button.ongoing_button {
+  display: flex;
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+  padding: 1rem;
+  left: 25%;
+  cursor: pointer;
+  background-size: contain;
+  border: none;
+  transition-duration: .3s;
+}
+
+* div.book_list button.delete_button {
+  display: flex;
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+  padding: 1rem;
+  cursor: pointer;
+  background-size: contain;
+  border: none;
+  transition-duration: .3s;
+}
+
+* div.book_list button.finished_button:hover {
+  transform: scale(1.1);
+  transition-duration: .3s;
+}
+
+* div.book_list button.ongoing_button:hover {
+  transform: scale(1.1);
+  transition-duration: .3s;
+}
+
+* div.book_list button.delete_button:hover {
+  transform: scale(1.1);
+  transition-duration: .3s;
+}
+
+* div.book_list div.book_item {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  height: fit-content;
+  padding: .1rem;
+}
+
+* div.book_list div.book_item h3.book_titles {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+* div.book_list div.book_item div.book_info {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  height: fit-content;
+}
+
+* div.book_list div.book_item div.book_info p.book_writers, * div.book_list div.book_item div.book_info p.book_years, * div.book_list div.book_item div.book_info p.space_book {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+nav {
+  display: flex;
+  position: sticky;
+  width: 100vw;
+  height: fit-content;
+  padding: 1rem 1rem .5rem;
+  justify-content: space-evenly;
+  align-items: center;
+  background: #ff616d;
+}
+
+nav img.web_logo {
+  position: relative;
+  width: 15rem;
+  object-fit: cover;
+  right: 5%;
+}
+
+nav div.search_bar {
+  display: flex;
+  width: fit-content;
+  justify-content: center;
+  align-items: center;
+}
+
+nav div.search_bar input.search_input {
+  display: flex;
+  width: 40vw;
+  height: 3rem;
+  padding: 1rem;
+  font-size: 1.25rem;
+  border-radius: .5rem;
+  border: 1px solid #FF616D;
+}
+
+nav div.search_bar div.search_button {
+  display: flex;
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  right: 5%;
+  padding: .2rem;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+nav div.search_bar div.search_button img {
+  width: 90%;
+  object-fit: contain;
+  transition-duration: .5s;
+}
+
+nav div.search_bar div.search_button:hover img {
+  transform: scale(1.1);
+  transition-duration: .3s;
+}
+
+nav ul.list_menu {
+  display: flex;
+  position: relative;
+  gap: 1.5rem;
+  left: 2%;
+}
+
+nav ul.list_menu li.list_item {
+  display: flex;
+  width: fit-content;
+  overflow: hidden;
+}
+
+nav ul.list_menu li.list_item a.item_link {
+  font-size: 2rem;
+  text-decoration: none;
+  color: white;
+  transition: .5s;
+}
+
+nav ul.list_menu li.list_item a.item_link div.link_underline {
+  display: flex;
+  width: 100%;
+  height: .25rem;
+  opacity: 0;
+  border-radius: 2rem;
+  background: #FFEAC9;
+  transition: .5s;
+}
+
+nav ul.list_menu li.list_item a.item_link:hover {
+  color: #FFEAC9;
+  transform: scale(1.03);
+  transition: .3s;
+}
+
+nav ul.list_menu li.list_item a.item_link:hover div.link_underline {
+  opacity: 1;
+  transition: .3s;
+}
+
+main {
+  display: flex;
+  width: 100vw;
+  height: fit-content;
+}
+
+main section.left_section {
+  display: flex;
+  width: fit-content;
+  height: fit-content;
+  padding: 1rem;
+}
+
+main section.left_section section.add_book {
+  display: flex;
+  flex-direction: column;
+  width: 20vw;
+  height: fit-content;
+  justify-content: center;
+  border-radius: 1rem;
+  border: 5px solid #FF616D;
+}
+
+main section.left_section section.add_book form.add_main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: fit-content;
+  padding: .5rem;
+}
+
+main section.left_section section.add_book form.add_main label {
+  font-size: 1.5rem;
+}
+
+main section.left_section section.add_book form.add_main input {
+  width: 95%;
+  height: 2rem;
+  padding: .25rem;
+  margin-bottom: .25rem;
+}
+
+main section.left_section section.add_book form.add_main input.input_book_synopsis {
+  height: 10rem;
+}
+
+main section.left_section section.add_book form.add_main div.add_radio_button {
+  display: flex;
+  flex-direction: row;
+  width: 95%;
+  justify-content: space-evenly;
+  gap: .5rem;
+}
+
+main section.left_section section.add_book form.add_main div.add_radio_button div.read {
+  display: flex;
+  width: 50%;
+  gap: .5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+main section.left_section section.add_book form.add_main div.add_radio_button div.read input {
+  width: 15%;
+  cursor: pointer;
+}
+
+main section.left_section section.add_book form.add_main div.add_radio_button div.not_read {
+  display: flex;
+  width: 40%;
+  gap: .5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+main section.left_section section.add_book form.add_main div.add_radio_button div.not_read input {
+  width: 15%;
+  cursor: pointer;
+}
+
+main section.left_section section.add_book form.add_main input.add_button {
+  display: flex;
+  width: fit-content;
+  height: fit-content;
+  justify-content: center;
+  align-items: center;
+  padding: .5rem 5rem;
+  margin: 0rem auto;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: .5rem;
+  border: 2px solid #FF616D;
+  background: white;
+  transition: .5s;
+}
+
+main section.left_section section.add_book form.add_main input.add_button:hover {
+  color: white;
+  background: #66DE93;
+  border-color: #1f5734;
+  transition: .3s;
+}
+
+main section.right_section {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  height: fit-content;
+  padding: 1rem;
+}
+
+main section.right_section section.read_book {
+  display: flex;
+  flex-direction: column;
+  width: 75vw;
+  height: 42vh;
+  justify-content: center;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  border-radius: 1rem;
+  border: 5px solid #FF616D;
+}
+
+main section.right_section section.read_book div.finished_reading_list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 90%;
+  padding: .5rem;
+  gap: .25rem;
+  overflow-y: scroll;
+}
+
+main section.right_section section.not_read_book {
+  display: flex;
+  flex-direction: column;
+  width: 75vw;
+  height: 42vh;
+  justify-content: center;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+  border: 5px solid #FF616D;
+}
+
+main section.right_section section.not_read_book div.not_finished_reading_list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 90%;
+  padding: .5rem;
+  gap: .25rem;
+  overflow-y: scroll;
+}
+
+@media screen and (max-width: 1440px) {
+  nav img.web_logo {
+    right: 3%;
+  }
+  nav div.search_bar div.search_button {
+    right: 6%;
+  }
+  nav ul.list_menu {
+    left: 0%;
+  }
+  main section.left_section section.add_book form.add_main div.add_radio_button div {
+    align-items: center;
+    justify-content: center;
+  }
+  main section.left_section section.add_book form.add_main div.add_radio_button div label {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  main section.left_section section.add_book form.add_main div.add_radio_button div label {
+    font-size: 1.05rem;
+  }
+  main section.right_section section.read_book {
+    width: 74vw;
+    height: 40vh;
+  }
+  main section.right_section section.not_read_book {
+    width: 74vw;
+    height: 40vh;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  nav img.web_logo {
+    right: 2%;
+  }
+  nav div.search_bar div.search_button {
+    right: 8%;
+  }
+  nav ul.list_menu {
+    left: -1%;
+  }
+  main section.left_section section.add_book form.add_main div.add_radio_button div label {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 1194px) {
+  * div.header_title h1.text_title {
+    height: fit-content;
+    font-size: 1.75rem;
+  }
+  nav img.web_logo {
+    right: 2%;
+    width: 14rem;
+  }
+  nav div.search_bar input.search_input {
+    width: 30vw;
+  }
+  nav div.search_bar div.search_button {
+    right: 10%;
+  }
+  nav ul.list_menu {
+    left: 0%;
+  }
+  main section.left_section section.add_book form.add_main div.add_radio_button div label {
+    font-size: .92rem;
+  }
+  main section.right_section section.read_book {
+    width: 73vw;
+  }
+  main section.right_section section.not_read_book {
+    width: 73vw;
+  }
+}
+
+@media screen and (max-width: 834px) {
+  * {
+    overflow: hidden;
+    overflow-y: scroll;
+  }
+  nav {
+    z-index: 3;
+    overflow: visible;
+  }
+  nav img.web_logo {
+    right: 2%;
+    width: 14rem;
+  }
+  nav div.search_bar input.search_input {
+    width: 40vw;
+  }
+  nav div.search_bar div.search_button {
+    right: 10%;
+  }
+  nav ul.list_menu {
+    flex-direction: column;
+    position: absolute;
+    width: 40vw;
+    height: 93vh;
+    top: 80;
+    left: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    background: #FF616D;
+    transition-duration: .5s;
+  }
+  nav ul.list_menu li.list_item a.item_link {
+    font-size: 3rem;
+  }
+  nav div.hamburger_menu {
+    display: flex;
+    flex-direction: column;
+    width: 3rem;
+    height: 3rem;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    overflow: visible;
+  }
+  nav div.hamburger_menu div {
+    width: 2rem;
+    height: .25rem;
+    background: white;
+    transition: .5s;
+  }
+  nav div.hamburger_menu div.first_line {
+    margin-bottom: .25rem;
+    transition: .5s;
+  }
+  nav div.hamburger_menu div.third_line {
+    margin-top: .25rem;
+    transition: .5s;
+  }
+  nav div.hamburger_menu:hover div {
+    background: #FFEAC9;
+    transition: .3s;
+  }
+  nav div.hamburger_menu:hover div.first_line {
+    transform: translateY(-0.25rem);
+    transition-duration: .3s;
+  }
+  nav div.hamburger_menu:hover div.third_line {
+    margin-top: .25rem;
+    transform: translateY(0.25rem);
+    transition-duration: .3s;
+  }
+  main {
+    flex-direction: column;
+    overflow: scroll;
+  }
+  main section.left_section section.add_book {
+    width: 95vw;
+  }
+  main section.left_section section.add_book form.add_main label {
+    font-size: 1.75rem;
+  }
+  main section.left_section section.add_book form.add_main input {
+    width: 98%;
+    height: 3rem;
+    font-size: 1.5rem;
+  }
+  main section.left_section section.add_book form.add_main div.add_radio_button div input {
+    width: 10%;
+  }
+  main section.left_section section.add_book form.add_main div.add_radio_button div label {
+    font-size: 1.5rem;
+  }
+  main section.left_section section.add_book form.add_main div.add_button {
+    width: 30%;
+    height: 3rem;
+  }
+  main section.right_section section.read_book {
+    width: 95vw;
+  }
+  main section.right_section section.not_read_book {
+    width: 95vw;
+  }
+}
+
+@media screen and (max-width: 428px) {
+  nav {
+    z-index: 3;
+    overflow: visible;
+  }
+  nav img.web_logo {
+    right: 2%;
+    width: 14rem;
+  }
+  nav div.search_bar input.search_input {
+    display: none;
+    width: 40vw;
+  }
+  nav div.search_bar div.search_button {
+    display: none;
+    right: 10%;
+  }
+  nav div.hamburger_menu {
+    display: flex;
+    flex-direction: column;
+    width: 3rem;
+    height: 3rem;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    overflow: visible;
+  }
+  nav div.hamburger_menu div {
+    width: 2rem;
+    height: .25rem;
+    background: white;
+    transition: .5s;
+  }
+  nav div.hamburger_menu div.first_line {
+    margin-bottom: .25rem;
+    transition: .5s;
+  }
+  nav div.hamburger_menu div.third_line {
+    margin-top: .25rem;
+    transition: .5s;
+  }
+  main section.left_section section.add_book {
+    width: 90vw;
+  }
+  main section.left_section section.add_book form.add_main input {
+    width: 95%;
+  }
+  main section.right_section section.read_book {
+    width: 90vw;
+    height: 80vh;
+  }
+  main section.right_section section.not_read_book {
+    width: 90vw;
+    height: 80vh;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  nav {
+    z-index: 3;
+    overflow: visible;
+  }
+  nav img.web_logo {
+    right: 2%;
+    width: 12rem;
+  }
+  main section.left_section section.add_book {
+    width: 90vw;
+  }
+  main section.left_section section.add_book form.add_main input {
+    width: 95%;
+  }
+  main section.right_section section.read_book {
+    width: 90vw;
+    height: 80vh;
+  }
+  main section.right_section section.not_read_book {
+    width: 90vw;
+    height: 80vh;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  nav img.web_logo {
+    right: 2%;
+    width: 10rem;
+  }
+  main section.left_section section.add_book {
+    width: 86vw;
+  }
+  main section.left_section section.add_book form.add_main input {
+    width: 95%;
+  }
+  main section.right_section section.read_book {
+    width: 86vw;
+    height: 100vh;
+  }
+  main section.right_section section.not_read_book {
+    width: 86vw;
+    height: 100vh;
+  }
+}
+/*# sourceMappingURL=style.css.map */

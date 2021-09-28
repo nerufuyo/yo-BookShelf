@@ -1,0 +1,90 @@
+<html lang="en">
+<head>
+    <!-- Tab Info -->
+    <title>Bookshelf :: Listyo Adi</title>
+    <link rel="icon" href="assets/svg/tab_logo.svg" type="image/x-icon">
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Eternal Links -->
+    <link rel="stylesheet" href="assets/style/style.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <img src="assets/svg/web_logo.svg" alt="Listyo Adi Bookshelf Image" class="web_logo">
+        <div class="search_bar">
+            <input type="text" placeholder="Input Title for Search..." class="search_input">
+            <div class="search_button"><img src="assets/svg/search_icon.svg" alt="Search"></div>
+        </div>
+        <ul class="list_menu">
+            <li class="list_item"><a href="#" class="item_link">Dashboard
+                <div class="link_underline"></div>
+            </a></li>
+            <li class="list_item"><a href="#" class="item_link">About
+                <div class="link_underline"></div>
+            </a></li>
+            <li class="list_item"><a href="#" class="item_link">Contact
+                <div class="link_underline"></div>
+            </a></li>
+        </ul>
+        <div class="hamburger_menu">
+            <div class="first_line"></div>
+            <div class="second_line"></div>
+            <div class="third_line"></div>
+        </div>
+    </nav>
+    <main>
+        <section class="left_section">
+            <section class="add_book">
+                <div class="header_title">
+                    <h1 class="text_title">Add Book</h1>
+                </div>
+                <form action="#" class="add_main" id="add_main">
+                    <label class="book_title">Title</label>
+                    <input type="text" placeholder="Book Title" class="input_book_title" required>
+                    <label class="book_writer">Writer</label>
+                    <input type="text" placeholder="Book Writer" class="input_book_writer" required>
+                    <label class="book_year">Publication Year</label>
+                    <input type="date" placeholder="Book Publication Year" class="input_book_year" required>
+                    <label class="book_synopsis">Synopsis</label>
+                    <input type="text" placeholder="Under Maintenance" class="input_book_synopsis" disabled>
+                    <div class="add_radio_button">
+                        <div class="read">
+                            <input type="radio" value="read" name="book_readed">
+                            <label for="read">Already Read!</label>
+                        </div>
+                        <div class="not_read">
+                            <input type="radio" value="not_read" name="book_readed">
+                            <label for="not_read">Not Yet</label>
+                        </div>
+                    </div>
+                    <!-- <div class="add_button" type="submit" value="Submit" name="Submit">Add</div> -->
+                    <input type="submit" value="Submit" name="Submit" class="add_button">
+                </form>
+            </section>
+        </section>
+        <section class="right_section">
+            <section class="not_read_book">
+                <div class="header_title">
+                    <h1 class="text_title">Not Finished Reading</h1>
+                </div>
+                <div class="not_finished_reading_list" id="not_finished_reading_list"></div>
+            </section>
+            <section class="read_book">
+                <div class="header_title">
+                    <h1 class="text_title">Finished Reading</h1>
+                </div>
+                <div class="finished_reading_list" id="finished_reading_list"></div>
+            </section>
+        </section>
+    </main>
+    <!-- Script Link -->
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
